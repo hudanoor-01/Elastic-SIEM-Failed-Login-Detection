@@ -10,7 +10,7 @@ Threshold Rule
 
 ## Data Source
 
-Elastic Security Data View
+Security Solution Default (Elastic Security Data View)
 
 ## KQL Query
 
@@ -24,7 +24,7 @@ host.name
 
 ## Threshold
 
-2 failed login events
+Generate an alert when 2 or more failed login events are detected from the same host.
 
 ## Schedule
 
@@ -42,4 +42,4 @@ Medium
 ## Description
 
 This detection rule identifies repeated failed Windows logon attempts originating from the same host.
-The rule helps detect possible brute-force attacks or unauthorized authentication attempts.
+The rule helps detect possible brute-force attacks or unauthorized authentication attempts by generating an alert when the configured threshold is reached.
