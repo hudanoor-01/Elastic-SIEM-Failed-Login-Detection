@@ -1,10 +1,10 @@
-# Elastic SIEM – Windows Failed Login Detection
+# Elastic SIEM – Windows Failed Logon Detection
 
 ## Project Overview
 
 This project demonstrates how to detect Windows failed logon attempts using **Elastic SIEM**, **Elastic Agent**, **Kibana**, and **KQL**.
 
-A custom detection rule was created to identify repeated failed login attempts (Windows Event ID **4625**) that may indicate brute-force attacks or unauthorized authentication attempts.
+A custom detection rule was created to identify repeated failed logon attempts (Windows Event ID **4625**) that may indicate brute-force attacks or unauthorized authentication attempts.
 
 ---
 
@@ -43,7 +43,7 @@ event.code:"4625"
 | Rule Type  | Threshold                |
 | Query      | `event.code:"4625"`      |
 | Group By   | `host.name`              |
-| Threshold  | 2 failed logins per host |
+| Threshold  | 2 failed logons per host |
 | Severity   | Medium                   |
 | Risk Score | 50                       |
 
@@ -53,8 +53,8 @@ event.code:"4625"
 
 The dashboard includes:
 
-* Total Failed Login Attempts
-* Failed Login Attempts Over Time
+* Total Failed Logon Attempts
+* Failed Logon Attempts Over Time
 * Top Targeted User Accounts
 * Top Affected Hosts
 * Failed Login Events Table
@@ -96,7 +96,7 @@ The dashboard includes:
 
 ## Future Improvements
 
-* Detect failed logins from multiple source IPs
+* Detect failed logons from multiple source IPs
 * Correlate successful logins after brute-force attempts
 * Add MITRE ATT&CK mapping
 * Expand detection coverage for additional Windows security events
